@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/cloque_b/Documents/Tek2/Bomberman/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36b7a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36b7a.dir/build.make CMakeFiles/cmTC_36b7a.dir/build
+make[1] : on entre dans le répertoire « /home/cloque_b/Documents/Tek2/Bomberman/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_36b7a.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_36b7a.dir/CheckSymbolExists.c.o   -c /home/cloque_b/Documents/Tek2/Bomberman/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_36b7a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36b7a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_36b7a.dir/CheckSymbolExists.c.o  -o cmTC_36b7a -rdynamic 
+CMakeFiles/cmTC_36b7a.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_36b7a.dir/build.make:97 : la recette pour la cible « cmTC_36b7a » a échouée
+make[1]: *** [cmTC_36b7a] Erreur 1
+make[1] : on quitte le répertoire « /home/cloque_b/Documents/Tek2/Bomberman/build/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_36b7a/fast » a échouée
+make: *** [cmTC_36b7a/fast] Erreur 2
+
+File /home/cloque_b/Documents/Tek2/Bomberman/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cloque_b/Documents/Tek2/Bomberman/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9364c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9364c.dir/build.make CMakeFiles/cmTC_9364c.dir/build
+make[1] : on entre dans le répertoire « /home/cloque_b/Documents/Tek2/Bomberman/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_9364c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9364c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9364c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9364c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9364c.dir/CheckFunctionExists.c.o  -o cmTC_9364c -rdynamic -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9364c.dir/build.make:97 : la recette pour la cible « cmTC_9364c » a échouée
+make[1]: *** [cmTC_9364c] Erreur 1
+make[1] : on quitte le répertoire « /home/cloque_b/Documents/Tek2/Bomberman/build/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_9364c/fast » a échouée
+make: *** [cmTC_9364c/fast] Erreur 2
+
+
